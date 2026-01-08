@@ -1,0 +1,113 @@
+@media only screen and (min-width:851px) {
+    #menu{
+        transition: all .3s ease-out;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "popular_title game_list"
+                            "popular_1 game_list"
+                            "popular_2 game_list";
+        padding: 2rem;
+        width: 90%;
+    }
+
+    body>section{
+        transition: all .3s ease-out;
+        max-width: 1000px;
+
+    }
+
+    section table{
+        transition: all .3s ease-out;
+        margin: 2rem;
+        grid-area: game_list;
+    }
+
+}
+
+@media only screen and (max-width:850px) {
+    #menu{
+        transition: all .3s ease-out;
+        display: grid;
+        grid-template-areas: "popular_title"
+                            "popular_1"
+                            "popular_2"
+                            "game_list";
+        padding: 0;
+        width: 100%;
+    
+    }
+
+    section table{
+        transition: all .3s ease-out;
+        margin: 2.2rem;
+        grid-area: game_list;
+        font-size: 1rem;
+    
+    }
+
+
+    section td:first-child, section th:first-child{
+        visibility: collapse;
+        position: absolute;
+        padding: 0;
+    }
+
+    td{
+        padding: 0.5rem;
+    }
+
+   
+    
+}
+
+
+
+table caption{
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: large;
+}
+
+button{
+    
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 0.1rem 0.1rem 0.3rem white;
+}
+
+.track{
+    font-size: x-large;
+    font-weight: bold;
+    
+}
+
+.count{
+    align-self: flex-end;
+    font-size: smaller;
+}
+
+#popular1{
+    grid-area: popular_1;
+    
+}
+
+section>h2{
+    grid-area: popular_title;
+    text-align: center;
+    align-self: center;
+    margin: 1rem;
+    padding: 0;
+    font-weight: bold;
+    font-size: large;
+}
+
+#popular2{
+    grid-area: popular_2;
+}

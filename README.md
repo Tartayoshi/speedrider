@@ -1,2 +1,3 @@
-# speedrider
-Racing game in PHP, JavaScript, HTML5, CSS as an exam test for Web Development course
+# Speed Rider
+Racing game in PHP, JavaScript, HTML5, CSS as an exam test for Web Development course.
+

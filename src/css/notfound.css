@@ -1,0 +1,33 @@
+body>section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: max-content;
+}
+
+
+a{
+    background-color: blue;
+    font-size: 1rem;
+    color: aliceblue;
+    text-decoration: unset;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 0 gray;
+}
+
+a:hover{
+  
+    font-size: 1rem;
+
+    box-shadow: 2px 2px 10px 0 rgb(54, 218, 255);
+}
+
+a:active{
+
+    font-size: 1rem;
+
+  
+    box-shadow: inset 2px 2px 10px 0 yellow;
+}

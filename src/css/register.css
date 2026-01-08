@@ -1,0 +1,38 @@
+input.delayedInvalid{
+    border: 1px inset red;
+    background-color: #ffcaca;
+    box-shadow: 0 0 5px 1px red;
+    border-radius: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+
+ul li::marker{
+    content: '☐';
+}
+
+li.chacked::marker {
+    content: '☑';
+    color: green;
+}
+
+li.chacked{
+    color: green;
+}
+
+li.unchacked::marker {
+    content: '☒';
+    color: red;
+}
+
+li.unchacked{
+    color: darkred;
+}
+
+#v-matchpwd{
+    color: red;
+    font-weight: bold;
+}

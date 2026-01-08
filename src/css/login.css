@@ -1,0 +1,65 @@
+form{
+    display: block;
+    background-color: whitesmoke;
+    border-radius: 2%;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    padding: 1rem;
+    border: solid black 0.1rem;
+}
+
+form p{
+    color: black;
+}
+
+fieldset{
+    display: table;
+    color: black;
+    border-radius: 2%;
+    padding: 2rem;
+    border: groove 0.2em;
+}
+
+fieldset p{
+    margin-bottom: 1rem;
+    font-size: small;
+}
+
+fieldset label, fieldset input{
+    display: table-row;
+    margin: 1%;
+}
+
+.error{
+    font-weight: bold;
+    color: red;
+}
+
+input, button{
+    border: 1px black solid;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+button{
+    background-color: antiquewhite;
+}
+input[type=submit]{
+    background-color: rgb(208, 255, 238);
+}
+
+
+
+input[type=text]:hover, input[type=password]:hover{
+    outline: none;
+    border: 1px solid #47d19f;
+    /*box-shadow: inset 1px 1px 2px 2px gray;*/
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    outline: none;
+    border: 1px solid #47d19f;
+    box-shadow: inset 1px 1px 2px 2px gray;
+}
