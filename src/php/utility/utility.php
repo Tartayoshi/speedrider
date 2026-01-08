@@ -1,5 +1,5 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT']."/php/settings/config.php";
+    require "../php/settings/config.php";
 
     class DataBase{
         private $pdo;
@@ -22,8 +22,49 @@
                 $this->pdo = new PDO("mysql:host=$this->dbhost;dbname=$this->dbname", $this->dbuser, $this->dbpass);
             }
             catch(PDOException  $e){
-                header("HTTP/1.1 404 Not Found");
-                header("Location: ".NOTFOUND);
+
+                try {
+                    $this->pdo = new PDO("mysql:host=$this->dbhost" , $this->dbuser, $this->dbpass);
+                    $this->pdo->exec("DROP DATABASE IF EXISTS `$this->dbname`;
+                                     CREATE DATABASE `$this->dbname`;
+                                     USE `$this->dbname`;
+                                     
+                                     DROP TABLE IF EXISTS `maps`;
+                                     CREATE TABLE `maps` (
+                                    `id` varchar(20) NOT NULL,
+                                    `name` varchar(20) NOT NULL,
+                                    `difficulty` int(11) NOT NULL,
+                                    PRIMARY KEY (`id`)
+                                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+                                    LOCK TABLES `maps` WRITE;
+                                    INSERT INTO `maps` VALUES ('autodromo_modena','Modena',2),('circuit_1','Kartodromo',1),('dounat','Fattoria ciambella',0);
+                                    UNLOCK TABLES;
+
+                                     DROP TABLE IF EXISTS `records`;
+                                     CREATE TABLE `records` (
+                                     `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                                    `id` int(11) NOT NULL AUTO_INCREMENT,
+                                    `player_name` varchar(20) NOT NULL,
+                                    `map_id` varchar(20) DEFAULT NULL,
+                                    `time` int(11) NOT NULL,
+                                    `ghost_data` json NOT NULL,
+                                    PRIMARY KEY (`id`)
+                                    ) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=latin1;
+                                    
+                                    DROP TABLE IF EXISTS `users`;
+                                    CREATE TABLE `users` (
+                                    `username` varchar(20) NOT NULL,
+                                    `password` varchar(60) NOT NULL,
+                                    PRIMARY KEY (`username`)
+                                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+                                    ");
+                    
+                    
+                } catch (PDOException $e) {
+                    header("HTTP/1.1 404 Not Found");
+                    header("Location: ".NOTFOUND);
+                }
+                
             };
         }
 
