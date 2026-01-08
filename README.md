@@ -1,10 +1,28 @@
 # Speed Rider
 *Racing game in PHP, JavaScript, HTML5, CSS as an exam test for Web Development course.*
 
+The project is a web application that uses a classic **MPA (Multi-Page Application)** architecture. The backend is powered by **PHP**, where each page is a separate `.php` file that handles logic and renders the HTML structure. Server-side scripts manage database interactions for fetching map data, user authentication, and storing game records.
+
+The frontend is built with standard **HTML, CSS, and JavaScript**. The game itself is a 2D racing game with a "fake" 3D prospective developed in **JavaScript** using the **HTML5 Canvas API**. The game's logic is structured around a **state machine pattern** to manage different phases like the countdown, racing, and game over.
+
+The styling is handled by **CSS**, with a main `default.css` file providing base styles. The layout is made reactive using **CSS media queries**, which adapt the content for screens wider or narrower than 850px. However, the game itself is designed for desktop use and is not optimized for mobile devices.
+
+
 > ## WARNING!
 > The project is in Italian, a translation in English is not planned soon an wont likely happen, if you wish to frok and translate it be my guest^^.
 >
 > It also was ment for an older version of FireFox and Chrome, expect things to not work properly.
+
+- [Speed Rider](#speed-rider)
+- [About the game](#about-the-game)
+- [Navigation](#navigation)
+- [How to play](#how-to-play)
+  - [Starting a Game](#starting-a-game)
+  - [Game Controls](#game-controls)
+  - [Vehicle Control](#vehicle-control)
+- [Installation](#installation)
+  - [Step by step guide](#step-by-step-guide)
+
 
 ---
 
