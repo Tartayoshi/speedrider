@@ -1,6 +1,8 @@
 # Speed Rider
 *Racing game in PHP, JavaScript, HTML5, CSS as an exam test for Web Development course.*
 
+![Game Preview](/src/game/assets/maps/circuit_1/circuit_1_preview.png)
+
 The project is a web application that uses a classic **MPA (Multi-Page Application)** architecture. The backend is powered by **PHP**, where each page is a separate `.php` file that handles logic and renders the HTML structure. Server-side scripts manage database interactions for fetching map data, user authentication, and storing game records.
 
 The frontend is built with standard **HTML, CSS, and JavaScript**. The game itself is a 2D racing game with a "fake" 3D prospective developed in **JavaScript** using the **HTML5 Canvas API**. The game's logic is structured around a **state machine pattern** to manage different phases like the countdown, racing, and game over.
@@ -42,10 +44,14 @@ The top menu allows you to easily navigate the site.
 
 From the `Home` page, you can directly access the two most popular courses, or challenge the ghosts of players who have just raced.
 
+![Home Page](/docs/img/Screenshot%202026-01-08%20232336.png)
+
 By clicking on `Courses`, you can see all available courses and the current record for that course.<br>
 By clicking on a *`course`*, you'll see the map, a description of the course, and a ranking of all the challengeable ghosts.
 
 `Login` allow you to access the site, or create an account if you're not already registered. Simply fill in the fields.
+
+![Map Info](/docs/img/Screenshot%202026-01-08%20232440.png)
 
 # How to play
 ## Starting a Game
@@ -105,5 +111,7 @@ This project require XAMPP to properly work:
 4. Remove the content of the folder and drag the content of `src` folder in there
 5. Open your browser and navigate to [localhost](http://localhost)
 6. Have fun ^^
+
+![Autodromo Modena](/src/game/assets/maps/autodromo_modena/autodromo_modena_preview.png)
 
 ---
